@@ -1,0 +1,38 @@
+name: Publish MY.FeatureToggle
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v2
+
+        - name: Setup .NET Core
+          uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: 3.1.301
+
+        - name: Install dependencies
+          run: dotnet restore src/dotnet/MY.FeatureToggle.sln
+
+        - name: Build
+          run: dotnet build src/dotnet/MY.FeatureToggle.sln --configuration Release --no-restore
+
+        - name: Publish MY.FeatureToggle
+          uses: brandedoutcast/publish-nuget@v2.5.2
+          with:
+            PROJECT_FILE_PATH: src/dotnet/MY.FeatureToggle/MY.FeatureToggle.csproj
+            NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+            NUGET_SOURCE: https://api.nuget.org
+
+        - name: Publish MY.FeatureToggle.Providers.LaunchDarkly
+          uses: brandedoutcast/publish-nuget@v2.5.2
+          with:
+            PROJECT_FILE_PATH: src/dotnet/Providers/MY.FeatureToggle.Providers.LaunchDarkly/MY.FeatureToggle.Providers.LaunchDarkly.csproj
+            NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+            NUGET_SOURCE: https://api.nuget.org

@@ -1,4 +1,4 @@
-name: MY.FeatureToggle
+name: Build MY.FeatureToggle
 
 on:
   pull_request:

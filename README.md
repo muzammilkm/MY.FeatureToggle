@@ -6,6 +6,8 @@ Easy & better management of your feature flags with easy to setup and dependency
 
 ## LaunchDarkly
 
+  ![MY.FeatureToggle](https://github.com/muzammilkm/MY.FeatureToggle/workflows/MY.FeatureToggle/badge.svg)
+
   > And also support launch darkly as a provider along with middleware.
 
 Please follow the steps
