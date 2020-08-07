@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/muzammilkm/MY.FeatureToggle</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/muzammilkm/MY.FeatureToggle</RepositoryUrl>
+    <PackageTags>Feature Toggle; Flag; Launch Darkly;</PackageTags>
+    <Description>Provide better management of feature flags</Description>
+    <Authors>Muzammil Khaja Mohammed</Authors>
+  </PropertyGroup>
+
+</Project>

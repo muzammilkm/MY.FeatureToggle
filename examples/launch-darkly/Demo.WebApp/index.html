@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>LaunchDarkly tutorial</title>
+    <script src="https://unpkg.com/launchdarkly-js-client-sdk@2"></script>
+  </head>
+  <body>
+    <script>
+      var user = {
+        "key": "14e84889-0132-42b1-86c1-be412553fe73",
+        "custom": {
+          "userName": "muzammilkm"
+        }
+      };
+      var div = document.createElement("div");
+      document.body.appendChild(div);
+      
+      div.appendChild(document.createTextNode('Initializing...'));
+        var ldclient = LDClient.initialize('client-side-id', user);
+      
+      function render() {
+          var shouldShow = ldclient.variation("get-single-feature", false);
+        var label = (shouldShow ? "Showing" : "Not showing") + " your feature to " + user.key;
+        div.replaceChild(document.createTextNode(label), div.firstChild);
+      }
+      
+      ldclient.on('ready', render);
+      ldclient.on('change', render);
+    </script>
+  </body>
+</html>
