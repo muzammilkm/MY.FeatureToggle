@@ -9,6 +9,7 @@
     <RepositoryUrl>https://github.com/muzammilkm/MY.FeatureToggle</RepositoryUrl>
     <PackageTags>Feature Toggle; Flag; Launch Darkly;</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
