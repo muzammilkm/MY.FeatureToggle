@@ -7,36 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MY.FeatureToggle", "MY.Feat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{C2AB987F-C784-4A9E-80D3-8907ECF3F9FD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{3742F18C-6D15-45F8-9512-CA37821D9B52}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Launch-Darkly", "Launch-Darkly", "{9DEB4779-28E4-4BDB-B987-D2B0B98809F4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MY.FeatureToggle.Providers.LaunchDarkly", "Providers\MY.FeatureToggle.Providers.LaunchDarkly\MY.FeatureToggle.Providers.LaunchDarkly.csproj", "{C8DF5B48-8757-4188-A139-80E6CFA04378}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.ConsoleApp", "..\..\examples\launch-darkly\Demo.ConsoleApp\Demo.ConsoleApp.csproj", "{3A3ECBF1-7D3F-4B7D-8EC1-B6B455AFA78B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.WebApi", "..\..\examples\launch-darkly\Demo.WebApi\Demo.WebApi.csproj", "{82FB7083-6CE5-4B58-B4C4-775C251C2E65}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Demo.WebApp", "..\..\examples\launch-darkly\Demo.WebApp\", "{04384C1E-F6F3-4C2D-80B8-12EED5E76D31}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_63876"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\examples\launch-darkly\Demo.WebApp\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63876\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_63876"
-		Release.AspNetCompiler.PhysicalPath = "..\..\examples\launch-darkly\Demo.WebApp\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63876\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "63876"
-		SlnRelativePath = "..\..\examples\launch-darkly\Demo.WebApp\"
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,28 +23,12 @@ Global
 		{C8DF5B48-8757-4188-A139-80E6CFA04378}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8DF5B48-8757-4188-A139-80E6CFA04378}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8DF5B48-8757-4188-A139-80E6CFA04378}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A3ECBF1-7D3F-4B7D-8EC1-B6B455AFA78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A3ECBF1-7D3F-4B7D-8EC1-B6B455AFA78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A3ECBF1-7D3F-4B7D-8EC1-B6B455AFA78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A3ECBF1-7D3F-4B7D-8EC1-B6B455AFA78B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{82FB7083-6CE5-4B58-B4C4-775C251C2E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82FB7083-6CE5-4B58-B4C4-775C251C2E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82FB7083-6CE5-4B58-B4C4-775C251C2E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82FB7083-6CE5-4B58-B4C4-775C251C2E65}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04384C1E-F6F3-4C2D-80B8-12EED5E76D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04384C1E-F6F3-4C2D-80B8-12EED5E76D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04384C1E-F6F3-4C2D-80B8-12EED5E76D31}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{04384C1E-F6F3-4C2D-80B8-12EED5E76D31}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9DEB4779-28E4-4BDB-B987-D2B0B98809F4} = {3742F18C-6D15-45F8-9512-CA37821D9B52}
 		{C8DF5B48-8757-4188-A139-80E6CFA04378} = {C2AB987F-C784-4A9E-80D3-8907ECF3F9FD}
-		{3A3ECBF1-7D3F-4B7D-8EC1-B6B455AFA78B} = {9DEB4779-28E4-4BDB-B987-D2B0B98809F4}
-		{82FB7083-6CE5-4B58-B4C4-775C251C2E65} = {9DEB4779-28E4-4BDB-B987-D2B0B98809F4}
-		{04384C1E-F6F3-4C2D-80B8-12EED5E76D31} = {9DEB4779-28E4-4BDB-B987-D2B0B98809F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72785783-5802-4364-9108-FEB7EBE9F5C7}
