@@ -10,7 +10,7 @@ namespace MY.FeatureToggle.Providers.LaunchDarkly
         private readonly string _key;
 
         public AnonymousFeatureToggleProvider(ILdClient ldClient)
-        : base(ldClient)
+            : base(ldClient)
         {
             _key = Guid.NewGuid().ToString();
         }
