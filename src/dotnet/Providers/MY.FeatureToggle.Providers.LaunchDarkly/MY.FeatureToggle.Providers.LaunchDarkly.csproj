@@ -7,9 +7,9 @@
     <Description>Provide better management of feature flags of Launch Darkly</Description>
     <PackageProjectUrl>https://github.com/muzammilkm/MY.FeatureToggle</PackageProjectUrl>
     <RepositoryUrl>https://github.com/muzammilkm/MY.FeatureToggle</RepositoryUrl>
-    <PackageTags>Feature Toggle; Flag; Launch Darkly;</PackageTags>
+    <PackageTags>Feature Toggle; Flag; Launch Darkly; LaunchDarkly; dotnet; core; inject; featurefalg; featuretoggle;</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

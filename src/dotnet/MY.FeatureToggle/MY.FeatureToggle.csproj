@@ -5,10 +5,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/muzammilkm/MY.FeatureToggle</PackageProjectUrl>
     <RepositoryUrl>https://github.com/muzammilkm/MY.FeatureToggle</RepositoryUrl>
-    <PackageTags>Feature Toggle; Flag; Launch Darkly;</PackageTags>
+    <PackageTags>Feature Toggle; Flag; Launch Darkly; dotnet; core; inject; featurefalg; featuretoggle;</PackageTags>
     <Description>Provide better management of feature flags</Description>
     <Authors>Muzammil Khaja Mohammed</Authors>
-    <Version>1.0.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
 </Project>

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace MY.FeatureToggle.Providers.LaunchDarkly
 {
-    public class AnonymousFeatureToggleProvider : BaseFeatureToggleProvider
+    public class AnonymousFeatureToggleProvider : LaunchDarklyFeatureToggleProvider
     {
         private readonly string _key;
 
