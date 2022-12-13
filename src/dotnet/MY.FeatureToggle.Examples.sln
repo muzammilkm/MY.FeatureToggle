@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MY.FeatureToggle", "MY.FeatureToggle\MY.FeatureToggle.csproj", "{7EB57013-8670-47A2-9435-821D8932A5BF}"
 EndProject
@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.WebApi", "..\..\exampl
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Demo.WebApp", "..\..\examples\launch-darkly\Demo.WebApp\", "{04384C1E-F6F3-4C2D-80B8-12EED5E76D31}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_63876"
 		Debug.AspNetCompiler.PhysicalPath = "..\..\examples\launch-darkly\Demo.WebApp\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63876\"

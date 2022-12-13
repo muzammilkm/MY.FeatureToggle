@@ -1,57 +1,53 @@
-﻿using LaunchDarkly.Client;
-using Newtonsoft.Json.Linq;
+﻿using LaunchDarkly.Sdk;
 using System.Collections.Generic;
 
 namespace MY.FeatureToggle.Providers.LaunchDarkly.Extensions
 {
     public static class UserExtensions
     {
-        public static User FromAttibutes(this User user, IDictionary<string, object> userAttributes = null)
+        public static User FromAttibutes(this IUserBuilder userBuilder, IDictionary<string, object> userAttributes = null)
         {
             if (userAttributes == null)
-                return user;
+                return userBuilder.Build();
 
             foreach (var userAttribute in userAttributes)
             {
                 switch (userAttribute.Key)
                 {
                     case "key":
-                        user.Key = userAttribute.Value.ToString();
-                        break;
-                    case "secondary":
-                        user.SecondaryKey = userAttribute.Value.ToString();
+                        userBuilder.Key(userAttribute.Value.ToString());
                         break;
                     case "ip":
-                        user.IpAddress = userAttribute.Value.ToString();
+                        userBuilder.IPAddress(userAttribute.Value.ToString());
                         break;
                     case "email":
-                        user.Email = userAttribute.Value.ToString();
+                        userBuilder.Email(userAttribute.Value.ToString());
                         break;
                     case "avatar":
-                        user.Avatar = userAttribute.Value.ToString();
+                        userBuilder.Avatar(userAttribute.Value.ToString());
                         break;
                     case "firstName":
-                        user.FirstName = userAttribute.Value.ToString();
+                        userBuilder.FirstName(userAttribute.Value.ToString());
                         break;
                     case "lastName":
-                        user.LastName = userAttribute.Value.ToString();
+                        userBuilder.LastName(userAttribute.Value.ToString());
                         break;
                     case "name":
-                        user.Name = userAttribute.Value.ToString();
+                        userBuilder.Name(userAttribute.Value.ToString());
                         break;
                     case "country":
-                        user.Country = userAttribute.Value.ToString();
+                        userBuilder.Country(userAttribute.Value.ToString());
                         break;
                     case "anonymous":
-                        user.Anonymous = bool.Parse(userAttribute.Value.ToString());
+                        userBuilder.Anonymous(bool.Parse(userAttribute.Value.ToString()));
                         break;
                     default:
-                        user.Custom.Add(userAttribute.Key, new JValue(userAttribute.Value));
+                        userBuilder.Custom(userAttribute.Key, LdValue.Of(userAttribute.Value.ToString()));
                         break;
                 }
             }
 
-            return user;
+            return userBuilder.Build();
         }
     }
 }

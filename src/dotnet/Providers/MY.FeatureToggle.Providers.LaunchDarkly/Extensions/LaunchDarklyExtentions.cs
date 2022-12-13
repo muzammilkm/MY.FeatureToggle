@@ -1,4 +1,4 @@
-﻿using LaunchDarkly.Client;
+﻿using LaunchDarkly.Sdk.Server;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MY.FeatureToggle.Providers.LaunchDarkly.Options;
@@ -21,7 +21,7 @@ namespace MY.FeatureToggle.Providers.LaunchDarkly.Extensions
             var launchDarklyClient = new LdClient(launchDarklyConfig);
 
             services
-                .AddSingleton<ILdClient>(launchDarklyClient);
+                .AddSingleton<LdClient>(launchDarklyClient);
 
             return services;
         }

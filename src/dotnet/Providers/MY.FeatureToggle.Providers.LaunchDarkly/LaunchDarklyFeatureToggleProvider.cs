@@ -1,7 +1,7 @@
-﻿using LaunchDarkly.Client;
+﻿using LaunchDarkly.Sdk;
+using LaunchDarkly.Sdk.Server;
 using MY.FeatureToggle.Constants;
 using MY.FeatureToggle.Extensions;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 
@@ -9,10 +9,10 @@ namespace MY.FeatureToggle.Providers.LaunchDarkly
 {
     public abstract class LaunchDarklyFeatureToggleProvider : IFeatureToggleProvider
     {
-        private readonly ILdClient _ldClient;
+        private readonly LdClient _ldClient;
         private User _user;
 
-        protected LaunchDarklyFeatureToggleProvider(ILdClient ldClient)
+        protected LaunchDarklyFeatureToggleProvider(LdClient ldClient)
         {
             _ldClient = ldClient;
         }
@@ -71,12 +71,6 @@ namespace MY.FeatureToggle.Providers.LaunchDarkly
                     var commaSeperateStr = _ldClient.StringVariation(feature.Key, _user, (string)feature.DefaultValue);
 
                     value = (T)Convert.ChangeType(commaSeperateStr.Split(new[] { ',' }, StringSplitOptions.None), typeof(T));
-                    break;
-                case VariationType.Json:
-                    if (feature.Type != VariationType.Json && type == typeof(JToken))
-                        throw new InvalidCastException($"Feature flag is configure to be {feature.Type} except to be JToken");
-
-                    value = (T)Convert.ChangeType(_ldClient.JsonVariation(feature.Key, _user, (JToken)feature.DefaultValue), typeof(T));
                     break;
             }
 

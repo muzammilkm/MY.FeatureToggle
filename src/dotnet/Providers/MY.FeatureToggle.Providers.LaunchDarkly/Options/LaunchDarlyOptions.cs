@@ -1,4 +1,4 @@
-﻿using LaunchDarkly.Client;
+﻿using LaunchDarkly.Sdk.Server;
 
 namespace MY.FeatureToggle.Providers.LaunchDarkly.Options
 {
