@@ -11,9 +11,7 @@ namespace MY.FeatureToggle.Providers.LaunchDarkly.Extensions
         public static IServiceCollection AddLaunchDarkly(this IServiceCollection services, IConfiguration configuration,
             Action<LaunchDarlyOptions> setupAction = null)
         {
-            var launchDarklyKey = configuration
-                .GetSection("LaunchDarkly")
-                .GetValue<string>("SdkKey");
+            var launchDarklyKey = configuration["LaunchDarkly:SdkKey"];
             var launchDarklyConfig = Configuration.Default(launchDarklyKey);
 
             setupAction?.Invoke(new LaunchDarlyOptions { Configuration = launchDarklyConfig });
