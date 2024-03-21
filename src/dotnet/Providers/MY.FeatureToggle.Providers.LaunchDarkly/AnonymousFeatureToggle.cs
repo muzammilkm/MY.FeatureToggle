@@ -1,6 +1,5 @@
 ﻿using LaunchDarkly.Sdk;
 using LaunchDarkly.Sdk.Server;
-using LaunchDarkly.Sdk.Server.Interfaces;
 using MY.FeatureToggle.Providers.LaunchDarkly.Extensions;
 using System;
 using System.Collections.Generic;
@@ -17,9 +16,10 @@ namespace MY.FeatureToggle.Providers.LaunchDarkly
             _key = Guid.NewGuid().ToString();
         }
 
-        protected override User GetUser(IDictionary<string, object> userAttributes = null)
+        protected override Context GetContext(IDictionary<string, object> userAttributes = null)
         {
-            return User.Builder(_key)
+            return Context
+                .Builder(_key)
                 .Anonymous(true)
                 .FromAttibutes(userAttributes);
         }
