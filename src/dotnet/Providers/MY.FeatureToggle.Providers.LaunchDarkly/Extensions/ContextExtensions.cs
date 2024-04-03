@@ -12,6 +12,9 @@ namespace MY.FeatureToggle.Providers.LaunchDarkly.Extensions
 
             foreach (var userAttribute in ucontextAttributes)
             {
+                if (userAttribute.Value == null)
+                    continue;
+
                 switch (userAttribute.Key)
                 {
                     case "key":
