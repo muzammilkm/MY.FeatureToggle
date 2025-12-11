@@ -9,13 +9,13 @@
     <RepositoryUrl>https://github.com/muzammilkm/MY.FeatureToggle</RepositoryUrl>
     <PackageTags>Feature Toggle; Flag; Launch Darkly; LaunchDarkly; dotnet; core; inject; featurefalg; featuretoggle;</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.1.0</Version>
+    <Version>3.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LaunchDarkly.ServerSdk" Version="8.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+    <PackageReference Include="LaunchDarkly.ServerSdk" Version="8.10.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.1" />
   </ItemGroup>
 
   <ItemGroup>
